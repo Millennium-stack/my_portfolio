@@ -8,7 +8,7 @@
 body {
   @include background;
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -48,10 +48,17 @@ header {
   color: $secondary-color;
 }
 
+.text-alternative {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  color: $secondary-color;
+  background: rgba(lighten($primary-color, 2), 0.5);
+}
+
 main {
   padding: 4rem;
-  // height: 100%;
-  min-height: calc(100vh - 60px);
+  height: 100%;
+  //min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -73,3 +80,210 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+}
+
+.exp-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+.edu-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "edu1"
+    "edu2"
+    "edu3"
+    "edu4";
+  grid-template-columns: auto;
+
+  .edu-1 {
+    grid-area: edu1;
+    font-size: 1rem;
+  }
+
+  .edu-2 {
+    grid-area: edu2;
+    font-size: 1rem;
+  }
+
+  .edu-3 {
+    grid-area: edu3;
+    font-size: 1rem;
+  }
+
+  .edu-4 {
+    grid-area: edu4;
+    font-size: 1rem;
+  }
+
+  .edu {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+.sk-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "sk1 sk2 sk3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .sk-1 {
+    grid-area: sk1;
+  }
+
+  .sk-2 {
+    grid-area: sk2;
+  }
+
+  .sk-3 {
+    grid-area: sk3;
+  }
+
+  .skill {
+    background: lighten($primary-color, 2);
+    padding: 0.5rem;
+  }
+}
+
+.ind-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "ind1 ind2 ind3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .ind-1 {
+    grid-area: ind1;
+  }
+
+  .ind-2 {
+    grid-area: ind2;
+  }
+
+  .ind-3 {
+    grid-area: ind3;
+  }
+
+  .indus {
+    background: lighten($primary-color, 2);
+    padding: 0.5rem;
+  }
+}
+
+// Work/Projects
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import "mobile";
