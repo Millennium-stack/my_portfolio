@@ -192,6 +192,10 @@ main {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+  .exp-info div:hover {
+    opacity: 0.5;
+    background: #0d0d0d;
+    transition: all 0.5s ease-out; }
 
 .edu-info {
   display: grid;
@@ -244,6 +248,46 @@ main {
   .ind-info .indus {
     background: #494949;
     padding: 0.5rem; }
+
+.honor-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "hon1 hon2 hon3";
+  grid-template-columns: repeat(3, 1fr); }
+  .honor-info .hon-1 {
+    grid-area: hon1; }
+  .honor-info .hon-2 {
+    grid-area: hon2; }
+  .honor-info .hon {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
+  .honor-info div:hover {
+    opacity: 0.5;
+    background: #0d0d0d;
+    transition: all 0.5s ease-out; }
+
+.cert-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "cert1 cert2 cert3";
+  grid-template-columns: repeat(3, 1fr); }
+  .cert-info .cert-1 {
+    grid-area: cert1; }
+  .cert-info .cert-2 {
+    grid-area: cert2; }
+  .cert-info .cert-3 {
+    grid-area: cert3; }
+  .cert-info .cert {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
+  .cert-info div img {
+    width: 100%; }
+  .cert-info div:hover {
+    opacity: 0.5;
+    background: #0d0d0d;
+    transition: all 0.5s ease-out; }
 
 .projects {
   display: grid;

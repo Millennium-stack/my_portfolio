@@ -123,6 +123,14 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+
+  div {
+    &:hover {
+      opacity: 0.5;
+      background: lighten($dark-color, 5);
+      @include easeOut;
+    }
+  }
 }
 
 .edu-info {
@@ -207,6 +215,71 @@ main {
   .indus {
     background: lighten($primary-color, 2);
     padding: 0.5rem;
+  }
+}
+
+.honor-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "hon1 hon2 hon3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .hon-1 {
+    grid-area: hon1;
+  }
+
+  .hon-2 {
+    grid-area: hon2;
+  }
+
+  .hon {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+
+  div {
+    &:hover {
+      opacity: 0.5;
+      background: lighten($dark-color, 5);
+      @include easeOut;
+    }
+  }
+}
+
+.cert-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "cert1 cert2 cert3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .cert-1 {
+    grid-area: cert1;
+  }
+
+  .cert-2 {
+    grid-area: cert2;
+  }
+
+  .cert-3 {
+    grid-area: cert3;
+  }
+
+  .cert {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+
+  div {
+    img {
+      width: 100%;
+    }
+    &:hover {
+      opacity: 0.5;
+      background: lighten($dark-color, 5);
+      @include easeOut;
+    }
   }
 }
 
