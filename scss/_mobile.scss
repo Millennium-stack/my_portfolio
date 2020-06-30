@@ -55,10 +55,75 @@
   .about-info {
     grid-template-areas:
       "bioimage"
-      "bio"
+      "bio";
+
+    grid-template-columns: 1fr;
+  }
+
+  .exp-info {
+    grid-template-areas:
       "job1"
       "job2"
-      "job3";
+      "job3"
+      "job4";
+
+    grid-template-columns: 1fr;
+  }
+
+  .edu-info {
+    grid-template-areas:
+      "edu1"
+      "edu2"
+      "edu3"
+      "edu4";
+
+    grid-template-columns: 1fr;
+  }
+
+  .sk-info {
+    grid-template-areas:
+      "sk1"
+      "sk2"
+      "sk3"
+      "sk4"
+      "sk5"
+      "sk6"
+      "sk7"
+      "sk8";
+
+    grid-template-columns: 1fr;
+  }
+
+  .ind-info {
+    grid-template-areas:
+      "ind1"
+      "ind2"
+      "ind3";
+
+    grid-template-columns: 1fr;
+  }
+
+  .honor-info {
+    grid-template-areas:
+      "hon1"
+      "hon2";
+
+    grid-template-columns: 1fr;
+  }
+
+  .cert-info {
+    grid-template-areas:
+      "cert1"
+      "cert2"
+      "cert3"
+      "cert4"
+      "cert5"
+      "cert6"
+      "cert7"
+      "cert8"
+      "cert9"
+      "cert10"
+      "cert11";
 
     grid-template-columns: 1fr;
   }

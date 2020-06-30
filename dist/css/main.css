@@ -123,6 +123,10 @@ h3 {
   h2.lg-heading,
   h3.lg-heading {
     font-size: 6rem; }
+  h1.lg-alternative,
+  h2.lg-alternative,
+  h3.lg-alternative {
+    font-size: 4rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -150,7 +154,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -379,7 +383,25 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio";
+    grid-template-columns: 1fr; }
+  .exp-info {
+    grid-template-areas: "job1" "job2" "job3" "job4";
+    grid-template-columns: 1fr; }
+  .edu-info {
+    grid-template-areas: "edu1" "edu2" "edu3" "edu4";
+    grid-template-columns: 1fr; }
+  .sk-info {
+    grid-template-areas: "sk1" "sk2" "sk3" "sk4" "sk5" "sk6" "sk7" "sk8";
+    grid-template-columns: 1fr; }
+  .ind-info {
+    grid-template-areas: "ind1" "ind2" "ind3";
+    grid-template-columns: 1fr; }
+  .honor-info {
+    grid-template-areas: "hon1" "hon2";
+    grid-template-columns: 1fr; }
+  .cert-info {
+    grid-template-areas: "cert1" "cert2" "cert3" "cert4" "cert5" "cert6" "cert7" "cert8" "cert9" "cert10" "cert11";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
